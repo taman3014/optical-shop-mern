@@ -136,3 +136,82 @@ body {
   cursor: pointer;
   margin-top: 10px;
 }
+/* ===== App Layout ===== */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background: #fdfdfd;
+}
+
+/* ===== Utility Buttons ===== */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #0077cc;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #005fa3;
+}
+
+/* ===== Forms (Login, Register, Checkout) ===== */
+.auth-form,
+.checkout-form {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.auth-form input,
+.checkout-form input,
+.checkout-form textarea,
+.checkout-form select {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.auth-form button,
+.checkout-form button {
+  width: 100%;
+  padding: 12px;
+  background: #0077cc;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.auth-form button:hover,
+.checkout-form button:hover {
+  background: #005fa3;
+}
+
+/* ===== Dashboard ===== */
+.dashboard {
+  max-width: 800px;
+  margin: auto;
+}
+
+.dashboard-section {
+  margin: 20px 0;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+}

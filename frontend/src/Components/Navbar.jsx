@@ -1,34 +1,18 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import { Link } from "react-router-dom";
 
-import Home from "./pages/Home";
-import Products from "./pages/Products";
-import ProductDetail from "./pages/ProductDetail";
-import Cart from "./pages/Cart";
-import Checkout from "./pages/Checkout";
-import Login from "./pages/Login";
-import Register from "./pages/Register";
-import Dashboard from "./pages/Dashboard";
-
-function App() {
+const Navbar = () => {
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/products/:id" element={<ProductDetail />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/checkout" element={<Checkout />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-      </Routes>
-      <Footer />
-    </Router>
+    <nav className="navbar">
+      <h2>Optical Shop</h2>
+      <ul>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/products">Shop</Link></li>
+        <li><Link to="/cart">Cart</Link></li>
+        <li><Link to="/login">Login</Link></li>
+      </ul>
+    </nav>
   );
-}
+};
 
-export default App;
+export default Navbar;
